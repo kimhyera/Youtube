@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const VideoItem = function ({ item, onClick }) {
+const VideoItem = props => {
 
     useEffect(() => {
         console.log('값이 설정됨');
@@ -8,14 +8,14 @@ const VideoItem = function ({ item, onClick }) {
     })
 
 
-    const videoImg = item.snippet.thumbnails.standard.url;
-    const videoTitle = item.snippet.title;
-    const videoName = item.snippet.channelTitle;
+    const videoImg = props.video.snippet.thumbnails.standard.url;
+    const videoTitle = props.video.snippet.title;
+    const videoName = props.video.snippet.channelTitle;
 
-    console.log(item);
+    console.log(props.video);
 
     return (
-        <div className="video-item">
+        <li className="video-item">
             <a href="#" className="thumbnail">
 
                 <div className="video-item-cover">
@@ -27,7 +27,7 @@ const VideoItem = function ({ item, onClick }) {
                     <p className="video-item-details-des">{videoName}</p>
                 </div>
             </a>
-        </div>
+        </li>
     )
 
 }
@@ -37,22 +37,23 @@ const VideoItem = function ({ item, onClick }) {
 
 
 
+const VideoList = props => {
 
-const VideoList = function ({ videos, onClick }) {
+
 
     return (
-        <div className="video-list">
+        <ul className="video-list">
 
 
-            {videos.map((item) => (
-                <VideoItem item={item} />
+            {props.videos.map((video) => (
+                <VideoItem key={video.id} video={video} />
             ))}
 
 
-        </div>
+        </ul>
     )
-
 }
+
 
 
 export default VideoList;
