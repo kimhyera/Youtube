@@ -1,3 +1,20 @@
+// Base
+//
+
+@import '../../scss/reset'; //reset
+//@import 'base/variables'; //color,size,font
+
+//
+// Mixins
+//
+
+@import '../../scss/breakpoints';
+@import '../../scss/mixin';
+
+
+
+
+
 /* list */
 .video-list{
     display: flex;
