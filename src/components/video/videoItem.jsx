@@ -8,7 +8,7 @@ const VideoItem = props => {
 
 
     return (
-        <li className="video-item">
+        <li className="video-item" >
             <a href="#" className="thumbnail">
 
                 <div className="video-item-cover">

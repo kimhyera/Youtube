@@ -39,3 +39,43 @@
     }
   }
   
+
+
+
+  //app
+
+  
+@import './reset'; //reset
+
+//
+// Mixins
+//
+
+@import './breakpoints';
+@import './mixin';
+
+
+html {
+  font-size: 16px;
+
+  @include size(lg){
+     font-size: 15px;
+  }
+
+  @include size(sm){
+    font-size: 14px;
+  }
+
+  @include size(xs){
+    font-size: 13px;
+  }
+}
+
+
+  #root{
+    margin:0 auto;
+    max-width: 1800px;
+    padding-left:2rem;
+    padding-right:2rem;
+  }
+
