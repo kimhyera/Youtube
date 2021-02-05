@@ -6,7 +6,7 @@ import './video.scss'
 
 
 
-const VideoList = props => {
+const VideoList = ({ videos, onVideoClick }) => {
 
 
 
@@ -15,8 +15,8 @@ const VideoList = props => {
 
 
 
-            {props.videos.map((video) => (
-                <VideoItem video={video} />
+            {videos.map((video) => (
+                <VideoItem video={video} onVideoClick={onVideoClick} />
             ))}
 
 
