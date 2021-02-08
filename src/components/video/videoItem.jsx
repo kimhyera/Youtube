@@ -2,22 +2,22 @@ import React, { useEffect } from 'react';
 import './video.scss'
 
 
-const VideoItem = props => {
+const VideoItem = ({ video, video: { snippet }, onVideoClick }) => {
 
 
 
 
     return (
-        <li className="video-item" >
+        <li className="video-item" onClick={() => onVideoClick(video)}>
             <a href="#" className="thumbnail">
 
                 <div className="video-item-cover">
-                    <img className="video-item-img" src={props.video.snippet.thumbnails.medium.url} alt="" />
+                    <img className="video-item-img" src={snippet.thumbnails.medium.url} alt="" />
 
                 </div>
                 <div className="video-item-details">
-                    <p className="video-item-details-h">{props.video.snippet.title}</p>
-                    <p className="video-item-details-des">{props.video.snippet.channelTitle}</p>
+                    <p className="video-item-details-h">{snippet.title}</p>
+                    <p className="video-item-details-des">{snippet.channelTitle}</p>
                 </div>
             </a>
         </li>
@@ -30,5 +30,3 @@ const VideoItem = props => {
 
 
 export default VideoItem;
-
-
