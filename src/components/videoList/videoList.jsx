@@ -16,7 +16,7 @@ const VideoList = ({ videos, onVideoClick, display }) => {
 
 
             {videos.map((video) => (
-                <VideoItem video={video} onVideoClick={onVideoClick} display={display} />
+                <VideoItem video={video} key={video.id} onVideoClick={onVideoClick} display={display} />
             ))}
 
 

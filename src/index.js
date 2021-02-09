@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './scss/index.scss';
 import App from './app.jsx';
 import '@fortawesome/fontawesome-free/js/all.js';
-import Youtube from './service/youtube';
+import Youtube from './service/youtubeFetch';
+import './scss/index.scss';
 
 const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_API_KEY);
 

@@ -15,12 +15,14 @@
 
 
   .video{
+    margin-bottom:1rem;
 
     &.list{
       flex:0 0 16.6666%;
       max-width: 16.6666%;
   
-      padding:1rem;
+      padding-left:1rem;
+      padding-right: 1rem;
 
     }
 
@@ -105,10 +107,10 @@
     -webkit-line-clamp: 2;
     font-weight: 500;
   
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    line-height: 2.0rem;
-  height: 4.0rem;
+    line-height: 1.5rem;
+  height: 3rem;
     
   }
   

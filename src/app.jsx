@@ -24,7 +24,7 @@ function App({ youtube }) {
   //: query 라는 것을 받아와서 처리하는 함수이다.
 
 
-  const search = query => {
+  const search = useCallback(query => {
 
     setSelectedVideo(null); //지정하면 원래화면으로 보인다.
     //로딩 스피너를 먼저 보여준다.
@@ -37,7 +37,7 @@ function App({ youtube }) {
 
 
 
-  }
+  }, [])
 
   // most popular
 
@@ -46,7 +46,7 @@ function App({ youtube }) {
 
       .then(videos => setVideos(videos))
 
-  }, []);
+  }, [youtube]);
 
 
 
