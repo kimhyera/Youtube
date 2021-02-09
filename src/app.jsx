@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import SearchForm from './components/searchFom/searchForm';
-import VideoList from './components/video/videoList'
-import VideoView from './components/video/videoView';
+import VideoList from './components/videoList/videoList'
+import VideoView from './components/videoView/videoView';
 
-import './scss/app.scss';
+
+import styles from './scss/app.module.scss';
 
 
 
@@ -24,8 +25,15 @@ function App({ youtube }) {
 
 
   const search = query => {
+
+    setSelectedVideo(null); //지정하면 원래화면으로 보인다.
+    //로딩 스피너를 먼저 보여준다.
     youtube.search(query)//
       .then(videos => setVideos(videos))
+    //에러 피스터 화면 보여준다. 
+
+
+
 
 
 
@@ -53,15 +61,19 @@ function App({ youtube }) {
       <SearchForm onSearch={search} />
 
 
-      <div className="video-container">
-        <div className="video-view-wrap">{
-          selectedVideo && <VideoView video={selectedVideo} />
-        }</div>
-        <div className="video-list-wrap">
-          <VideoList videos={videos} onVideoClick={selectVideo} /></div>
+      <div className={styles.content}>
+        {selectedVideo && <div className={styles.detail}>
+          <VideoView video={selectedVideo} />
+        </div>}
+        <div className={styles.list}>
+          <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'grid' : 'list'} /></div>
       </div>
     </>
   );
 }
+
+
+
+
 
 export default App;

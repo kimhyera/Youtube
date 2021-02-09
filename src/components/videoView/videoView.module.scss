@@ -1,0 +1,47 @@
+// Base
+//
+
+@import '../../scss/reset'; //reset
+//@import 'base/variables'; //color,size,font
+
+//
+// Mixins
+//
+
+@import '../../scss/breakpoints';
+@import '../../scss/mixin';
+
+
+
+.iframebx{
+  position: relative;
+  width:100%;
+  padding-top: 56.25%;
+
+  iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+  }
+
+}
+
+
+.desbx{
+  padding:2rem;
+  h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color:#000;
+  }
+
+  h3{
+    font-size: 1.2rem;
+  }
+  .des{
+    margin-top: 2rem;
+    white-space: pre-wrap;
+  }
+}

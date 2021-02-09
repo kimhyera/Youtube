@@ -1,0 +1,25 @@
+// Base
+//
+
+@import '../../scss/reset'; //reset
+//@import 'base/variables'; //color,size,font
+
+//
+// Mixins
+//
+
+@import '../../scss/breakpoints';
+@import '../../scss/mixin';
+
+
+
+
+
+/* list */
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    margin: -1rem;
+}
+  
