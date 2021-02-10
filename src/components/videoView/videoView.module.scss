@@ -1,8 +1,6 @@
 // Base
 //
 
-@import '../../scss/reset'; //reset
-//@import 'base/variables'; //color,size,font
 
 //
 // Mixins
@@ -30,18 +28,36 @@
 
 
 .desbx{
-  padding:2rem;
-  h2{
+  padding:1.5rem;
+  word-break: break-all;
+  .title{
     font-size: 1.3rem;
     font-weight: 500;
     color:#000;
+
+    @include size(md){
+      font-size: 1.1rem;
+    }
   }
 
-  h3{
+  .channel_name{
     font-size: 1.2rem;
+    a{
+      font-weight: 500;
+      color:#000;
+    }
+
+    @include size(md){
+      font-size: 1.0rem;
+    }
   }
   .des{
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     white-space: pre-wrap;
   }
+}
+
+
+.name_span{
+  margin-left:0.3rem;
 }

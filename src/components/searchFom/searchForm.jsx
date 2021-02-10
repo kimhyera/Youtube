@@ -28,7 +28,7 @@ const SearchForm = memo(
 
             <div className="header">
 
-                <a href="/" className="youtube-logo" title="로고">
+                <a href="index.html" className="youtube-logo" title="로고">
 
 
                     <svg viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" focusable="false"

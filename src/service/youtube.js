@@ -25,6 +25,22 @@ class Youtube {
 
     }
 
+    async chennals(name) {
+        const reponse = await this.youtube.get('channels', {
+            params: {
+                part: 'snippet',
+                chart: 'chennals',
+                maxResults: 25,
+                forUsername: name
+
+            }
+        });
+
+        return reponse.data.items;
+
+
+    }
+
     async search(query) {
         const reponse = await this.youtube.get('search', {
             params: {

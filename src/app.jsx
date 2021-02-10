@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
+
+import { Helmet } from 'react-helmet';
 import SearchForm from './components/searchFom/searchForm';
 import VideoList from './components/videoList/videoList'
 import VideoView from './components/videoView/videoView';
@@ -17,7 +19,6 @@ function App({ youtube }) {
   const selectVideo = (video) => {
     setSelectedVideo(video)
 
-    console.log(video);
   }
 
   //search
@@ -57,13 +58,25 @@ function App({ youtube }) {
   return (
     <>
 
+      <Helmet>
+        <title>youtube clone</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="youtube clone" />
 
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+        <meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+      </Helmet>
       <SearchForm onSearch={search} />
 
 
       <div className={styles.content}>
         {selectedVideo && <div className={styles.detail}>
-          <VideoView video={selectedVideo} />
+          <VideoView video={selectedVideo} youtube={youtube} />
         </div>}
         <div className={styles.list}>
           <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'grid' : 'list'} /></div>

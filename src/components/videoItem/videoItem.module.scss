@@ -1,8 +1,6 @@
 // Base
 //
 
-@import '../../scss/reset'; //reset
-//@import 'base/variables'; //color,size,font
 
 //
 // Mixins
@@ -17,15 +15,14 @@
   .video{
     margin-bottom:1rem;
 
-    &.list{
+
       flex:0 0 16.6666%;
       max-width: 16.6666%;
   
       padding-left:1rem;
       padding-right: 1rem;
 
-    }
-
+  
     &.grid{
       
       flex:0 0 100%;

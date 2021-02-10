@@ -1,7 +1,13 @@
 import React from 'react';
 
 import styles from './videoView.module.scss'
+
+
+
+
 const VideoView = ({ video }) => {
+
+
     return (
 
         <>
@@ -19,8 +25,13 @@ const VideoView = ({ video }) => {
             </div>
 
             <div className={styles.desbx} >
-                <h2> {video.snippet.title}</h2>
-                <h3> {video.snippet.channelTitle}</h3>
+                <h2 className={styles.title}> {video.snippet.title}</h2>
+                <h3 className={styles.channel_name}>
+
+                    <a title="채널바로가기" href={`https://www.youtube.com/channel/${video.snippet.channelId}`} className={styles.channelurl}>
+                        <i class="fas fa-user-circle"></i>
+
+                        <span className={styles.name_span}>{video.snippet.channelTitle}</span></a></h3>
 
                 <pre className={styles.des}>
                     {video.snippet.description}
