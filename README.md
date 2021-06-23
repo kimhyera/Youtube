@@ -1,5 +1,6 @@
 # Youtube-clone
 React.js 만든 Youtube 앱  https://kimhyera.github.io/Youtube/
+AIzaSyDQSEHKzs2p2us3I6RNFbfFa2Huq9kWqa0
  
  
 ### 주요기능
